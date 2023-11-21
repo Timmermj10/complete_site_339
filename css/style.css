@@ -51,6 +51,13 @@ video {
     border: dashed white 2px;
 }
 
+img:hover,
+video:hover {
+    border: solid white 5px;
+}
+
+
+
 /* .likes {
     text-align: center;
 }
@@ -72,7 +79,9 @@ video {
     margin: 0px 60px;
 }
 
-.item {
+.item,
+.itemt,
+.itemr {
     border: solid 2px white;
     margin: 5px;
     border-radius: 10px;
@@ -162,6 +171,68 @@ video {
     display: none;
 }
 
+footer {
+    background-image: url("../images/background_img.jpeg");
+    text-align: center;
+}
+
+.icon,
+.nav_foot {
+    font-size: 24px;
+    font-family: Vina Sans;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment-section {
+    border: #000 solid 2px;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+.comment-section input {
+    border: #000 solid 2px;
+    width: 70%;
+    margin: 2%;
+    padding: 1%;
+}
+
+.comment-section button {
+    margin: 2%;
+    padding: 1%;
+    border: #000 solid 2px;
+    width: 15%;
+    float: right;
+    text-align: center;
+}
+
+.comment-section ul {
+    border: #000 solid 2px;
+    padding: 1%;
+    margin: 2%;
+    white-space: normal;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.like-section {
+    margin: 1%;
+}
+
+.total_likes {
+    font-size: larger;
+    margin-left: 2%;
+}
+
+.like {
+    border: #000 solid 2px;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 10px;
+}
+
 @keyframes skipping {
     0% {
         top: -100px
@@ -195,7 +266,9 @@ video {
 
     #skip:focus,
     .type,
-    .item {
+    .item,
+    .itemt,
+    .itemr {
         animation: none;
         opacity: 1;
     }
@@ -212,13 +285,13 @@ video {
 
     .photos {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
     }
 
     .photos_food {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
     }
 
     .photos a {
@@ -295,39 +368,159 @@ video {
     }
 }
 
-.comment-section {
-    border: #000 solid 2px;
-    margin: 1%;
-    margin-bottom: 5%;
-}
-
-.comment-section input {
-    border: #000 solid 2px;
-    width: 70%;
-    margin: 2%;
-    padding: 1%;
-}
-
-.comment-section button {
-    margin: 2%;
-    padding: 1%;
-    border: #000 solid 2px;
-    width: 15%;
-    float: right;
-    text-align: center;
-}
-
-.comment-section ul {
-    border: #000 solid 2px;
-    padding: 1%;
-    margin: 2%;
-    white-space: normal;
-    height: auto;
-    word-wrap: break-word;
-}
-
 @media screen and (min-width: 768px) {
     body {
         background-color: pink;
+    }
+
+    #skip {
+        color: white;
+    }
+
+    .navbar a.active {
+        background-color: #AD0057;
+    }
+
+    .item {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: auto auto auto;
+    }
+
+    .box1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .box2 {
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+
+    .box2>img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .box3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .box4 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .box5 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .box6 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .box7 {
+        grid-column: 1/-1;
+        grid-row: 4;
+    }
+
+    .itemt {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .tb1 {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    .tb2 {
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    .tb3 {
+        grid-column: 4/-1;
+        grid-row: 1;
+    }
+
+    .info_travel {
+        grid-column: 3/-1;
+        grid-row: 2;
+    }
+
+    .tb4 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .photos_travel {
+        grid-column: 1/-1;
+        grid-row: 4;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    .photos_travel figure:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .itemr {
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .rb1 {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    .info {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .rb2 {
+        grid-column: 1/-1;
+        grid-row: 2;
+    }
+
+    .info {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .rb3 {
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .methods {
+        grid-column: 2/-1;
+        grid-row: 3;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .rb4 {
+        grid-column: 1/-1;
+        grid-row-start: 4;
+    }
+
+    .photos_food {
+        grid-column: 1/-1;
+        grid-row: 5;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    .photos_food a:nth-child(3) {
+        grid-column: span 1;
     }
 }
